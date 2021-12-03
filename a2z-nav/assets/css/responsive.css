@@ -1,0 +1,188 @@
+:root{
+  --text-color  : #697BA2;
+  --main-color  : linear-gradient( 135deg, #6A30D1 0%, #5C83E3 100%);
+  --active-color: #635CDB;
+  --anchor-color: #6F8BA4;
+  --red         : red;
+  --white       : #fff;
+
+}
+@media (max-width:768px){
+  header{
+    background: var(--white) !important;
+    box-shadow: 0 2px 28px 0 rgb(0 0 0 / 6%);
+    height: 80px;
+  }
+  .header-logo{
+    line-height: 80px;
+  }
+  .logo{
+    width: 100px;
+  }
+  .menu {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    top: 23px;
+    width: 32px;
+    height: 40px;
+    text-indent: -9999em;
+    z-index: 99;
+    right: 10px;
+  }
+  .menu span, .menu span:before, .menu span:after {
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    background-color: #3B566E;
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    left: 0;
+  }
+  .menu span:before, .menu span:after {
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    background-color: #3B566E;
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    left: 0;
+    width: 75%;
+  }
+  .menu span:before, .menu span:after {
+    content: "";
+  }
+  .menu span {
+    top: 16px;
+  }
+  .menu span:before {
+    -moz-transform-origin: 33% 100%;
+    -ms-transform-origin: 33% 100%;
+    -webkit-transform-origin: 33% 100%;
+    transform-origin: 33% 100%;
+    top: -10px;
+    z-index: 10;
+  }
+  .menu span:after {
+    -moz-transform-origin: 33% 0;
+    -ms-transform-origin: 33% 0;
+    -webkit-transform-origin: 33% 0;
+    transform-origin: 33% 0;
+    top: 10px;
+  }
+  .menu.menu-active span{
+    background: transparent;
+  }
+  .menu.menu-active span:before {
+    -moz-transform: translateY(6px) translateX(1px) rotate(45deg);
+    -ms-transform: translateY(6px) translateX(1px) rotate(45deg);
+    -webkit-transform: translateY(6px) translateX(1px) rotate(45deg);
+    transform: translateY(6px) translateX(1px) rotate(45deg);
+    background-color: #3B566E;
+    width: 100%;
+  }
+  .menu.menu-active span:after {
+    -moz-transform: translateY(-6px) translateX(1px) rotate(-45deg);
+    -ms-transform: translateY(-6px) translateX(1px) rotate(-45deg);
+    -webkit-transform: translateY(-6px) translateX(1px) rotate(-45deg);
+    transform: translateY(-6px) translateX(1px) rotate(-45deg);
+    background-color: #3B566E;
+    width: 100%;
+  }
+
+  .nav{
+    opacity: 0;
+    visibility: hidden;
+    
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    right: 0;
+    z-index: -1;
+  }
+  .nav.nav-active{
+    opacity: 1;
+    visibility: visible;
+    background: #fff;
+    line-height: unset;
+    /* position: absolute; */
+    top: 100%;
+    -webkit-transition: all .3s ease .3s;
+    transition: all .3s ease .3s;
+  }
+  .nav.nav-active ul{
+    padding-left: 0;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .nav.nav-active ul li{
+    width: 100%;
+    border-bottom: 1px solid #f5f5f5;
+  }
+  .nav.nav-active>ul>li>a{
+    display: block;
+    border-bottom: 1px solid #f5f5f5;
+    letter-spacing: 1px;
+  }
+  .nav.nav-active ul li:last-child{
+    border-bottom: 0;
+  }
+  .nav.nav-active ul>.subnav::after{
+    content: none;
+  }
+  .nav.nav-active ul>.subnav>a::after {
+    font-family: FontAwesome;
+    content: "\f107";
+    font-size: 12px;
+    color: var(--anchor-color);
+    float: right;
+    
+  
+  }
+  .subnav.active-subnav>a{
+    background: #f5f5f5;
+    letter-spacing: 1px;
+  }
+  .nav ul>.subnav>ul{
+
+    position: unset;
+    box-shadow: unset;
+    display: none;
+    border-radius: 0;
+    padding-left: 0;
+    width: 100%;  
+    overflow: hidden;
+    transition: all .3s ease 0s;
+  }
+  .nav ul>.subnav:hover > ul {
+    display: none;
+  }
+  .nav ul>.subnav.active-subnav>ul{
+    display: block;
+  }
+  .nav ul>.subnav>ul>li{
+    list-style: none;
+    
+    border-bottom: 1px solid #f5f5f5;
+  }
+  .nav ul>.subnav>ul>li>a{
+    background: #fefefe;
+    display: block;
+    padding-left: 20px;
+    height: 40px;
+    line-height: 40px;
+    color: unset;
+    font-size: 13px;
+    transition: all .3s ease 0s;
+  }
+  .nav ul>.subnav>ul>li:last-child{
+    border-bottom: 1px solid #f5f5f5;
+  }
+  
+}
