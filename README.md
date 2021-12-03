@@ -1,5 +1,5 @@
 # Navigation menu(full responsive)
-_sponsered by [sand blasting machine](https://www.airoshotblast.net/)_
+_sponsored by [sand blasting machine](https://www.airoshotblast.net/)_
 
 Table of content:
 1. [Html5](https://github.com/a2zproviders/)
